@@ -1,0 +1,24 @@
+{
+  "name": "myList",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "deviceId": {
+      "type": "array",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "devices": {
+      "type": "hasMany",
+      "model": "device",
+      "foreignKey": "myListId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

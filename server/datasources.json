@@ -1,0 +1,42 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "myNeoDB": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "myNeoDB",
+    "password": "",
+    "name": "myNeoDB",
+    "user": "",
+    "connector": "mongodb",
+    "useNewUrlParser": "true"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/files"
+  },
+  "neoDeviceMail": {
+    "name": "neoDeviceMail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.wwindia.com",
+        "secure": false,
+        "port": 25,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "rahul.sapkal@wwindia.com",
+          "pass": "rahuls123"
+        }
+      }
+    ]
+  }
+}

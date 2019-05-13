@@ -1,0 +1,82 @@
+{
+  "name": "emp",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fname": {
+      "type": "string",
+      "required": true
+    },
+    "lname": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "branch": {
+      "type": "object",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": false
+    },
+    "mob": {
+      "type": "number"
+    },
+    "createdate": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    
+    "issueDevices": {
+      "type": "hasMany",
+      "model": "issueDevice",
+      "foreignKey": "empId"
+    },
+    "myLists": {
+      "type": "hasOne",
+      "model": "myList",
+      "foreignKey": "empId"
+    },
+    "returnDevices": {
+      "type": "hasMany",
+      "model": "returnDevice",
+      "foreignKey": "empId"
+     
+      
+    }
+  },
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "AdminLogin"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

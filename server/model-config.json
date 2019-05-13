@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "myNeoDB",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Email": {
+    "dataSource": "neoDeviceMail",
+    "public": true
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "emp": {
+    "dataSource": "myNeoDB",
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
+  },
+  "device": {
+    "dataSource": "myNeoDB",
+    "public": true
+  },
+  "image": {
+    "dataSource": "myNeoDB",
+    "public": true
+  },
+  "container": {
+    "dataSource": "storage",
+    "public": false
+  },
+  "category": {
+    "dataSource": "myNeoDB",
+    "public": true
+  },
+  "issueDevice": {
+    "dataSource": "myNeoDB",
+    "public": true
+  },
+  "myList": {
+    "dataSource": "myNeoDB",
+    "public": true
+  },
+  "returnDevice": {
+    "dataSource": "myNeoDB",
+    "public": true
+  }
+}
